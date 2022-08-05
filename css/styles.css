@@ -4,21 +4,37 @@
     --main-background-color:#F5F5F5;
     --second-background-color:#F5F4FA;
     --brand-color: #2196F3;
+    --second-brand-color: #188CE8;
     --brandnew-color: #2F303A;
     --hero-text-color: #FFFFFF;
     --logo-color:#000000;
-
+    --grey-color: #EEEEEE;
+    --top-line-color: #ECECEC;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--title-color);
+    letter-spacing: 0.03em;
+    color: var(--main-background-color);
+    color: var(--title-color);
 }
 ul{
     padding: 0;
     margin: 0;
     list-style: none;
 }
-
-body{
-    font-family: 'Roboto', sans-serif;
-    color: var(--title-color);
-}
+.visually-hidden {
+    position: absolute;
+      white-space: nowrap;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      margin: -1px;
+  } 
 /* container */
 .container{
     width: 1200px;
@@ -31,6 +47,19 @@ body{
     /* outline: solid tomato; */
 
 }
+/* акцент */
+.web,
+.page-nav,
+.item:hover,
+.page-nav,
+.item:focus,
+.address-nav:hover,
+.address-nav:focus,
+.address-footer:hover,
+.address-footer:focus{
+    color: var(--brand-color);
+}
+
 /* шапка */
 /* logo */
 .logo {
@@ -38,19 +67,19 @@ body{
     margin-right: 93px;
     color: var(--logo-color);
     text-decoration: none;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-size: 26px;
     line-height: 1.2;
 }
-.web {
-    color: var(--brand-color);
-}
+
 
 .header-page {
     padding-top: 24px;
     padding-bottom: 25px;
     display: flex;
     align-items: center;
+
+    border-bottom: 1px solid var(--top-line-color)
 }
 .header-page .container {
     display: flex;
@@ -83,10 +112,6 @@ body{
     letter-spacing: 0.02em;
 
 }
-.page-nav .item:hover,
-.page-nav .item:focus{
-    color: var(--brand-color);
-}
 
 .address-nav{
     color: var(--text-color);
@@ -97,10 +122,10 @@ body{
     letter-spacing: 0.02em;
 
 }
-.address-nav:hover,
-.address-nav:focus {
-    color: var(--brand-color);
-}
+/* .line{
+    border-bottom: 1px solid var(--top-line-color)
+} */
+
 
 
 /* hero-page */
@@ -110,8 +135,13 @@ body{
     
 }
 .hero .title {
+
+    width: 694px;
+    margin: 0 auto 30px auto;
+    /* margin-left: auto;
+    margin-right: auto;
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 30px; */
 
     color: var(--hero-text-color);
     font-weight: 900;
@@ -125,8 +155,9 @@ body{
     letter-spacing: 0.06em;
     font-weight: 700;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 1.87;
     
+    cursor: pointer;
     width: 216px;
     min-height: 50px;
     
@@ -136,13 +167,15 @@ body{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
+.buy-button:hover{
+    background: var(--second-brand-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
 /* main index*/
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
-}
-.features {
-    display: none;
 }
 .text {
     margin-top: 0;
@@ -155,8 +188,7 @@ body{
 .features-item .text{
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em
+    line-height: 1.71;
 }
 .features-item .title {
     margin-top: 0px;
@@ -164,8 +196,7 @@ body{
     
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
+    line-height: 1.14;
     text-transform: uppercase;
 
 
@@ -182,7 +213,6 @@ body{
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
-    letter-spacing: 0.03em;
 }
 .list-example {
     display: flex;
@@ -195,6 +225,8 @@ body{
 }
 
 .title-team{
+    background-color: var(--second-background-color);
+
     margin-top: 0;
     margin-bottom: 50px;
 
@@ -202,10 +234,16 @@ body{
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
-    letter-spacing: 0.03em;
 }
 .list-team{
     display: flex;
+}
+.item-team{
+    padding-bottom: 30px;
+    background-color: var(--hero-text-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
 }
 .item-team + .item-team {
     margin-left: 30px;
@@ -215,14 +253,12 @@ body{
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
-    letter-spacing: 0.03em;
 }
 .position{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
-    text-align: center;
-    letter-spacing: 0.03em; 
+    text-align: center; 
 }
 /* footer */
 .footer{
@@ -234,8 +270,11 @@ body{
     text-decoration: none;
     font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
 
+}
+
+.list-address {
+    font-style: normal;
 }
 .list-address:not(:last-child) {
     margin-bottom: 9px;
@@ -248,18 +287,19 @@ body{
     background-color: var(--brandnew-color);
 }
 .logo-footer{
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+
     display: inline-block;
     margin-bottom: 20px;
 
     text-decoration: none;
     color: var(--hero-text-color);
-    font-family: 'Raleway'
+    font-family: 'Raleway', sans-serif
     
 }
 /* портфоліо */
-.projects{
-    display: none;
-}
 .project-list {
     margin-bottom: 50px;
     display: flex;
@@ -279,7 +319,6 @@ body{
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
-    letter-spacing: 0.03em;
     cursor: pointer;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
@@ -294,6 +333,10 @@ body{
 }
 
 .picture {
+    border-left: 1px solid var(--grey-color);
+    border-right: 1px solid var(--grey-color); 
+
+    border-bottom: 1px solid var(--grey-color);
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
@@ -307,6 +350,7 @@ body{
 
 
 .picture-list{
+    text-align: center;
 
     display: flex;
     flex-wrap: wrap;
@@ -318,7 +362,7 @@ body{
 
     font-weight: 700;
     font-size: 18px;
-    line-height: 36px;
+    line-height: 2;
     letter-spacing: 0.06em;
     color: var(--title-color);
 }
@@ -329,7 +373,13 @@ body{
     
     font-weight: 400;
     font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.03em;
+    line-height: 1.87;
     color: var(--text-color);
+}
+.project-item {
+    display: inline-block;
+
+    padding-bottom: 10px;
+
+    text-decoration: none;
 }
