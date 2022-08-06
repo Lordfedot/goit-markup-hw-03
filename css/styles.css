@@ -35,7 +35,14 @@ ul{
       clip-path: inset(50%);
       margin: -1px;
   } 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+}
 /* container */
+
 .container{
     width: 1200px;
     padding-left: 15px;
@@ -47,6 +54,7 @@ ul{
     /* outline: solid tomato; */
 
 }
+
 /* акцент */
 .web,
 .page-nav,
@@ -130,10 +138,13 @@ ul{
 
 /* hero-page */
 .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-color: var(--brandnew-color);
     text-align: center;
     
 }
+
 .hero .title {
 
     width: 694px;
@@ -151,6 +162,7 @@ ul{
     text-transform: uppercase;
 
 }
+
 .buy-button {
     letter-spacing: 0.06em;
     font-weight: 700;
@@ -172,7 +184,9 @@ ul{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
+
 /* main index*/
+
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -189,6 +203,8 @@ ul{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+
+    /* width: 270px; */
 }
 .features-item .title {
     margin-top: 0px;
@@ -205,6 +221,7 @@ ul{
 .features-list {
     display: flex;
 }
+
 .title-example{
     margin-top: 0px;
     margin-bottom: 50px;
@@ -239,7 +256,6 @@ ul{
     display: flex;
 }
 .item-team{
-    padding-bottom: 30px;
     background-color: var(--hero-text-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -248,11 +264,17 @@ ul{
 .item-team + .item-team {
     margin-left: 30px;
 }
+.about-person {
+    padding: 30px;
+}
 .person{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
+
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 .position{
     font-weight: 500;
@@ -260,6 +282,10 @@ ul{
     line-height: 1.18;
     text-align: center; 
 }
+.no-padding{
+    padding-bottom: 0;
+}
+
 /* footer */
 .footer{
     padding-top: 60px;
@@ -299,6 +325,7 @@ ul{
     font-family: 'Raleway', sans-serif
     
 }
+
 /* портфоліо */
 .project-list {
    
@@ -322,7 +349,6 @@ ul{
     line-height: 1.62;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
 .project-list .item + .item {
@@ -330,24 +356,17 @@ ul{
 }
 .project-button:hover,
 .project-button:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     background-color: var(--brand-color);
     color: var(--hero-text-color);
 }
 
 .picture {
-    border-left: 1px solid var(--grey-color);
-    border-right: 1px solid var(--grey-color); 
+    border: 1px solid var(--grey-color);
 
-    border-bottom: 1px solid var(--grey-color);
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
-}
-.picture:nth-child(3n){
-    margin-right: 0;
-}
-.picture:nth-last-child(-n + 3){
-    margin-bottom: 0;
 }
 
 
@@ -356,10 +375,13 @@ ul{
 
     display: flex;
     flex-wrap: wrap;
+
+    margin-bottom: -30px;
+    margin-right: -30px;
 }
 .project-name{
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 0;
     margin-bottom: 4px;
 
     font-weight: 700;
@@ -379,9 +401,15 @@ ul{
     color: var(--text-color);
 }
 .project-item {
+    text-align: start;
     display: inline-block;
 
     padding-bottom: 10px;
 
     text-decoration: none;
+}
+.about-project {
+    margin-left: 24px;
+    margin-top: 20px;
+    display: inline-block;
 }
