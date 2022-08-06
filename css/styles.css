@@ -301,12 +301,14 @@ ul{
 }
 /* портфоліо */
 .project-list {
+   
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
 }
 
 .project-button {
+    padding: 6px 22px;
     display: inline-block;
     min-width: 73px;
     min-height: 38px;
